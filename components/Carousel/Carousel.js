@@ -22,13 +22,14 @@ class Carousel {
     this.carousel = document.querySelector('.carousel');
     this.images = document.querySelectorAll('.picture');
     this.images = image;
-    this.left = document.querySelector('.left-button');
-    this.right = document.querySelector('.right-button');
+    this.leftBtn = document.querySelector('.left-button');
+    this.rightBtn = document.querySelector('.right-button');
     this.total = this.images.length - 1;
     this.current = 0;
+    this.activeImg.style.display = "block";
     this.left.addEventListener('click', () => this.prev());
     this.right.addEventListener('click', () => this.next());
-
+    
   }
 
   prev() {

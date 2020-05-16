@@ -7,12 +7,15 @@
 //
 //  Each tab should look like this:
 //    <div class="tab">topic here</div>
-this. element = element;
-this.tabData = this.element.dataset.tab;
-if(this.tabData === 'all') {
-    this.card = document.querySelectorAll('.card');
-} else {
-    this.card = document.querySelectorAll(`.card[data-tab='${this.tabData}']`);
+
+class TabLink{
+    constructor(element){
+        this. element = element;
+        this. tabData = this.element.dataset.tab;
+            if(this.tabData === 'all') {
+                this.card = document.querySelectorAll('.card');
+        } else {
+    this.card = document.querySelectorAll(`.card[data-tab='${this.tab}']`);
     this.cards = Array.from(this.cards).map(card => new TabCard(card) );
     this.element.addEventListener('click', () => this.selectTab() );
 }
@@ -26,9 +29,10 @@ if(this.tabData === 'all') {
     cards.forEach(card => card.getElementsByClassName.display ="none");
     this.cards.forEach(card => card.selectCard());
 
+
 class TabCard {
     constructor(element) {
-    this.element = elemnet;
+    this.cardElement = cardElemnet;
 }
 
 selectCard() {
@@ -36,6 +40,8 @@ this.element.style.display = null;
 }
 }
 
-let tabs = document.querySelectorAll('.tab');
+tabs = document.querySelectorAll('.tab').forEach(item=>new TabLink(item));
 tabs = Array.from(tabs).map(tab => new TabLink(tab) );
 tabs[0].selectTab();
+    }
+}

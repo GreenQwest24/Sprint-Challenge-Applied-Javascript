@@ -54,6 +54,7 @@ body {
   position: fixed;
   height: 44px;
   background-color: #333;
+  z-index: 999;
 }
 .top-bar .container {
   width: 100%;
@@ -300,6 +301,15 @@ body {
   transform: translate(0, -50%);
 }
 .carousel img {
+  width: 100%;
+  display: none;
+}
+
+.carousel .img--is--active {
+  display: block;
+}
+
+.hide {
   width: 100%;
   display: none;
 }
