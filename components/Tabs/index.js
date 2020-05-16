@@ -7,3 +7,35 @@
 //
 //  Each tab should look like this:
 //    <div class="tab">topic here</div>
+this. element = element;
+this.tabData = this.element.dataset.tab;
+if(this.tabData === 'all') {
+    this.card = document.querySelectorAll('.card');
+} else {
+    this.card = document.querySelectorAll(`.card[data-tab='${this.tabData}']`);
+    this.cards = Array.from(this.cards).map(card => new TabCard(card) );
+    this.element.addEventListener('click', () => this.selectTab() );
+}
+
+//selectTab () {
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach(tab => tab.classList.remove('active-tab') );
+    this.element.classList.add('active-tab');
+
+    const cards = document.querySelectorAll('cards');
+    cards.forEach(card => card.getElementsByClassName.display ="none");
+    this.cards.forEach(card => card.selectCard());
+
+class TabCard {
+    constructor(element) {
+    this.element = elemnet;
+}
+
+selectCard() {
+this.element.style.display = null;
+}
+}
+
+let tabs = document.querySelectorAll('.tab');
+tabs = Array.from(tabs).map(tab => new TabLink(tab) );
+tabs[0].selectTab();
