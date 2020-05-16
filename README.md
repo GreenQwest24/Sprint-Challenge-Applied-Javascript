@@ -37,6 +37,18 @@ Edit this document to include your answers after each question. Make sure to lea
 4. Why would we convert a NodeList into an Array?
 
 5. What is a component?
+1.	What is the DOM?
+The Document Object Model (DOM) is a programming interface for HTML and XML documents. The Document Object Model represents that same document so it can be manipulated. The DOM is an object-oriented representation of the web page, which can be modified with a scripting language such as JavaScript.
+2.	What is an event?
+HTML events are things that happen to HTML elements. When JavaScript is used in HTML pages, JavaScript can “react” on these events.
+3.	What is an event listener?
+The EventListner interface represents an object that can handle an event dispatched by an EventTarget object.
+4.	Why would we convert a Node List into an Array?
+Being an “array-like” object, a Nodelist has some methods that are similar to methods on arrayscbut they are seriously limited. Example, Nodelists have read only methods and a method for length and a much less powerful version of the iteration of forEach method.
+5.	What is a component?
+A component is a small, potentially re-usable set of logic, behaviors and interface elements (UI or API). And without components or component based UI development, our applications become monolithic spaghetti monsters.
+
+
 
 ### Git Set up
 
