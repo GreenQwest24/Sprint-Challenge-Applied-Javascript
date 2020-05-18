@@ -20,14 +20,14 @@ class TabLink{
     this.element.addEventListener('click', () => this.selectTab() );
 }
 
-//selectTab () {
+selectTab; {
     const tabs = document.querySelectorAll('.tab');
     tabs.forEach(tab => tab.classList.remove('active-tab') );
     this.element.classList.add('active-tab');
 
-    const cards = document.querySelectorAll('cards');
+    const cards = document.querySelectorAll('card');
     cards.forEach(card => card.getElementsByClassName.display ="none");
-    this.cards.forEach(card => card.selectCard());
+    cards.forEach(card => card.selectCard());
 
 
 class TabCard {
@@ -40,8 +40,11 @@ this.element.style.display = null;
 }
 }
 
+
 tabs = document.querySelectorAll('.tab').forEach(item=>new TabLink(item));
 tabs = Array.from(tabs).map(tab => new TabLink(tab) );
 tabs[0].selectTab();
-    }
+}
+    
+}
 }
